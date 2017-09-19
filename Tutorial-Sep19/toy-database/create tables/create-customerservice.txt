@@ -1,0 +1,11 @@
+CREATE TABLE `customerservice` (
+  `serviceID` int(11) NOT NULL,
+  `customerID` int(11) NOT NULL,
+  `staffNo` int(11) NOT NULL,
+  `serviceDate` datetime NOT NULL,
+  PRIMARY KEY (`serviceID`),
+  KEY `staffNo_idx` (`staffNo`),
+  KEY `customerID_idx` (`customerID`),
+  CONSTRAINT `customerID` FOREIGN KEY (`customerID`) REFERENCES `customer` (`customerID`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT `staffNo` FOREIGN KEY (`staffNo`) REFERENCES `staff` (`staffNo`) ON DELETE NO ACTION ON UPDATE CASCADE
+) 

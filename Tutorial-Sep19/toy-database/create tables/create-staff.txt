@@ -1,0 +1,16 @@
+CREATE TABLE `staff` (
+  `staffNo` int(11) NOT NULL,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
+  `position` varchar(45) NOT NULL,
+  `gender` char(1) NOT NULL,
+  `dob` datetime NOT NULL,
+  `salary` int(11) NOT NULL,
+  `branchNo` int(11) DEFAULT NULL,
+  PRIMARY KEY (`staffNo`),
+  KEY `branchNo_idx` (`branchNo`),
+  CONSTRAINT `branchNo` FOREIGN KEY (`branchNo`) REFERENCES `branch` (`branchNo`) ON DELETE NO ACTION ON UPDATE CASCADE
+) 
+
+
+

@@ -1,0 +1,7 @@
+CREATE TABLE `branch` (
+  `branchNo` int(11) NOT NULL,
+  `street` varchar(45) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  `postalcode` char(7) NOT NULL,
+  PRIMARY KEY (`branchNo`)
+) 
